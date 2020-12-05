@@ -1,0 +1,44 @@
+<p-dialog header="Add New User" [(visible)]="popupFlag" [modal]="true" [style]="{width: '50vw'}" [baseZIndex]="10000"
+    [draggable]="false" [resizable]="false" styleClass="mydialog" (onHide)="changeflag($event)">
+
+    <form id="form1" name="form1" #f="ngForm" novalidate class="needs-validation registrationForm" (ngSubmit)="onSubmitDetails($event)">
+        <div class="row mar0 padlt0 marTop10">
+            <label class="col-md-4" for="fullname">Full Name</label>
+            <div class="col-md-8">
+            <input type="text" [(ngModel)]="data.fullname" class="form-control" name="fullname" id="fullname" #fullname="ngModel" value="" />
+            </div> 
+        </div>
+        <div class="row mar0 padlt0 marTop10">
+            <label class="col-md-4" for="birthdate">DOB</label>
+                <div class="col-md-8 padinTop p-fluid">
+                    <p-calendar [(ngModel)]="data.birthdate" name="birthdate" id="birthdate" [showIcon]="true" #birthdate="ngModel" inputId="icon"></p-calendar>
+                </div>
+        </div>
+        <div class="row mar0">
+            <label class="col-md-4" for="languages">Languages</label>
+                <div class="col-md-8 padinTop p-fluid">
+                    <p-multiSelect [options]="languages" [(ngModel)]="selectedLang" optionLabel="name" defaultLabel="Select a Language" [ngModelOptions]="{standalone: true}"></p-multiSelect>
+                </div>
+        </div>
+        <div class="row col-md-12 col-xs-12 padinTop controlClass marTop10">
+            <label class="col-md-4" for="gender">Gender</label>
+            <div class="col-md-4 p-field-radiobutton">
+                <p-radioButton name="groupname" value="Male" [(ngModel)]="selectedValue"></p-radioButton>
+              <label for="gender1">Male</label>
+          </div>
+          <div class="col-md-4 p-field-radiobutton">
+                <p-radioButton name="groupname" value="Female" [(ngModel)]="selectedValue"></p-radioButton>
+              <label for="gender2">Female</label>
+          </div>
+          </div>
+          <div class="row col-md-12 marTop10">
+            <label class="col-md-4" for="about">About</label>
+            <div class="col-md-8 p-fluid">
+                <textarea rows="5" cols="30" pInputTextarea autoResize="autoResize" name="about" id="about" [(ngModel)]="data.about" #about="ngModel" value="" style="width: 100%;"></textarea>
+            </div>
+          </div>
+          <div class="col-md-12 submitBtnsection marBtm20 text-center marTop10">
+            <button class="btn btn-primary btn-sm" type="submit" >Save Users</button>
+        </div>
+    </form>
+</p-dialog> 

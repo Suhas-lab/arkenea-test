@@ -1,0 +1,65 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+
+
+.mar0{
+    margin: 0 !important
+}
+.marTop10{
+    margin-top: 15px;
+}
+.padinTop{
+    padding-top: 10px;
+}
+.marBtm20{
+    margin-bottom: 20px;
+}
+.pading0{
+    padding: 0 !important
+}
+.p-sidebar-right{
+    background-color: #ccc;
+}
+.p-field-radiobutton label {
+    margin-left: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    top: 10px;
+}
+.p-progressbar-determinate .p-progressbar-label.ng-star-inserted {
+    color: #ffffff;
+}
+.submitBtnsection button {
+    font-size: 24px;
+}
+.p-sidebar-content .col-lg-12 {
+    margin-top: 1.5rem;
+}
+.col-lg-12.textValue {
+    font-size: 2rem;
+    font-weight: 700;
+}
+.textarea{width: 100%;}
+
+:host ::ng-deep .p-button {
+    margin: 0 .5rem 0 0;
+    min-width: 10rem;
+}
+
+p {
+    margin: 0;
+}
+
+.confirmation-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+:host ::ng-deep .p-dialog .p-button {
+    min-width: 6rem;
+}
+.p-dialog {
+    background-color: #ccc;
+    text-align: center;
+}
